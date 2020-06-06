@@ -63,6 +63,7 @@ public class BatchEditService {
             Student stu = null;
             //字数
             int wordNum = stuEntity.getContent().length();
+            log.info(stuEntity.getUsername()+"同学字数:"+wordNum);
             //sizeNum ----->  100:周报大于字数，500：月报大于字数，2500：总结大于字数
             if (stuEntity.getContent().isEmpty() || wordNum < sizeNum) {
                 //判断是否是总结，总结逻辑另外处理，不满2500字驳回，2500-3000字，分值区间70-80；3000字以上，分值区间80-90
@@ -89,7 +90,7 @@ public class BatchEditService {
                         //分数区间80-90
                         score = RandomNum(Constant.SCORE_EIGHTY, Constant.SCORE_NINETY);
                     }
-                    log.info(stuEntity.getUsername()+"同学字数:"+wordNum+",分数："+score);
+                    log.info(stuEntity.getUsername()+"同学分数："+score);
                     //stu【批阅号，分数，已审核状态】
                     stu = new Student(student.getReportId(), score, Constant.STATE_OK);
                 } else {
