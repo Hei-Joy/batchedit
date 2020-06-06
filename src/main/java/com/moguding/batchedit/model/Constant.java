@@ -44,6 +44,10 @@ public class Constant {
      */
     public static final int MONTH_SIZE_NUM = 500;
     /**
+     * 总结最低字数限制
+     */
+    public static final int SUMMARY_MIN_SIZE_NUM = 2500;
+    /**
      * 总结字数
      */
     public static final int SUMMARY_SIZE_NUM = 3000;
@@ -54,7 +58,24 @@ public class Constant {
     /**
      * 已经批改状态
      */
-    public static final int STATE = 1;
+    public static final int STATE_OK = 1;
+    /**
+     * 驳回批改状态
+     */
+    public static final int STATE_ERROR = 2;
+    /**
+     * 分数70
+     */
+    public static final int SCORE_SEVENTY = 70;
+    /**
+     * 分数80
+     */
+    public static final int SCORE_EIGHTY = 80;
+    /**
+     * 分数90
+     */
+    public static final int SCORE_NINETY = 90;
+
 
     /**
      * 好久没用枚举了，总感觉怪怪的
@@ -74,5 +95,6 @@ public class Constant {
             return num;
         }
     }
+
 
 }

@@ -31,17 +31,19 @@ public class Student {
     private String username;
 
 
-    public Student(String reportId, int score, int state, double starNum, String content, String username) {
+    public Student(String reportId, int state) {
         this.reportId = reportId;
-        this.score = score;
         this.state = state;
-        this.starNum = starNum;
-        this.content = content;
-        this.username = username;
     }
 
     public Student(String reportId) {
         this.reportId = reportId;
+    }
+
+    public Student(String reportId, int score, int state) {
+        this.reportId = reportId;
+        this.score = score;
+        this.state = state;
     }
 
     public Student(String reportId, int score, int state, double starNum) {
