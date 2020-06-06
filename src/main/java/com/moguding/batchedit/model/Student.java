@@ -53,6 +53,24 @@ public class Student {
         this.starNum = starNum;
     }
 
+    /**
+     * 必须加全参构造方法，不然fastjson封装不进对象，已经踩坑
+     * @param reportId
+     * @param score
+     * @param state
+     * @param starNum
+     * @param content
+     * @param username
+     */
+    public Student(String reportId, int score, int state, double starNum, String content, String username) {
+        this.reportId = reportId;
+        this.score = score;
+        this.state = state;
+        this.starNum = starNum;
+        this.content = content;
+        this.username = username;
+    }
+
     public String getReportId() {
         return reportId;
     }
