@@ -12,7 +12,7 @@ public class Student {
     /**
      * 分数
      */
-    private int score;
+    private Integer score;
     /**
      * 状态
      */
@@ -40,13 +40,13 @@ public class Student {
         this.reportId = reportId;
     }
 
-    public Student(String reportId, int score, int state) {
+    public Student(String reportId, Integer score, int state) {
         this.reportId = reportId;
         this.score = score;
         this.state = state;
     }
 
-    public Student(String reportId, int score, int state, double starNum) {
+    public Student(String reportId, Integer score, int state, double starNum) {
         this.reportId = reportId;
         this.score = score;
         this.state = state;
@@ -62,7 +62,7 @@ public class Student {
      * @param content
      * @param username
      */
-    public Student(String reportId, int score, int state, double starNum, String content, String username) {
+    public Student(String reportId, Integer score, int state, double starNum, String content, String username) {
         this.reportId = reportId;
         this.score = score;
         this.state = state;
@@ -79,11 +79,11 @@ public class Student {
         this.reportId = reportId;
     }
 
-    public int getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 
