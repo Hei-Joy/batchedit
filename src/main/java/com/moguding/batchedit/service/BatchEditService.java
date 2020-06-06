@@ -89,7 +89,7 @@ public class BatchEditService {
                         //分数区间80-90
                         score = RandomNum(Constant.SCORE_EIGHTY, Constant.SCORE_NINETY);
                     }
-                    log.info(stuEntity.getUsername()+"同学分数："+score);
+                    log.info(stuEntity.getUsername()+"同学字数:"+wordNum+",分数："+score);
                     //stu【批阅号，分数，已审核状态】
                     stu = new Student(student.getReportId(), score, Constant.STATE_OK);
                 } else {
