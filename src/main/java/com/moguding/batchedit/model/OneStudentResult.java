@@ -1,6 +1,5 @@
 package com.moguding.batchedit.model;
 
-import java.util.List;
 
 /**
  * @author yxb

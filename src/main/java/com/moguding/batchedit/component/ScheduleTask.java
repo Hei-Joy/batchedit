@@ -29,6 +29,7 @@ public class ScheduleTask {
     /**
      * 定时任务
      * 每天9，12，15，18，21点执行
+     * 测试用：0/1 * * * * ?
      */
     @Scheduled(cron = "0 0 9,12,15,18,21 * * ?")
     private void configureTasks() {

@@ -17,9 +17,17 @@ public class Constant {
      */
     public static final String GET_STUDENT_URL = "https://api.moguding.net:9000/practice/paper/v1/info";
     /**
-     * 修改URL
+     * 周报月报总结审核URL
      */
     public static final String UPDATE_URL = "https://api.moguding.net:9000/practice/paper/v1/audit";
+    /**
+     * 补签管理列表
+     */
+    public static final String SUPPLEMENTARY_SIGNATURE_URL = "https://api.moguding.net:9000/attendence/attendanceReplace/v1/list";
+    /**
+     * 补签审核URL
+     */
+    public static final String UPDATE_SUPPLEMENTARY_SIGNATURE = "https://api.moguding.net:9000/attendence/attendanceReplace/v1/audit";
     /**
      * 周报json
      * 懒得封装成对象再转json了
@@ -35,6 +43,11 @@ public class Constant {
      * 懒得封装成对象再转json了
      */
     public static final String SUMMARY_JSON = "{\"currPage\":1,\"pageSize\":1000000,\"batchId\":\"87256fa0fa61554485f0aee99ae4793d\",\"classId\":\"\",\"teaId\":\"\",\"reportType\":\"summary\",\"planId\":\"\",\"state\":0,\"studentNumber\":\"\",\"startTime\":\"\",\"endTime\":\"\"}";
+    /**
+     * 补签json
+     * 懒得封装成对象再转json了
+     */
+    public static final String SUPPLEMENTARY_SIGNATURE = "{\"currPage\":1,\"pageSize\":1000000,\"batchId\":\"87256fa0fa61554485f0aee99ae4793d\",\"startTime\":\"\",\"endTime\":\"\",\"state\":\"APPLYINT\",\"username\":\"\",\"studentNumber\":\"\"}";
     /**
      * 周报字数
      */

@@ -1,5 +1,7 @@
 package com.moguding.batchedit.model;
 
+import java.util.List;
+
 /**
  * @author admin
  */
@@ -10,7 +12,7 @@ public class Student {
      */
     private String reportId;
     /**
-     * 分数
+     * 分数Integer不然驳回为0分
      */
     private Integer score;
     /**
@@ -29,7 +31,19 @@ public class Student {
      * 姓名
      */
     private String username;
+    /**
+     * 补签id
+     */
+    private String attendanceId;
+    /**
+     * 审核状态
+     */
+    private int applyState;
 
+    /**
+     * 批量处理补签
+     */
+    private List attendenceIds;
 
     public Student(String reportId, int state) {
         this.reportId = reportId;
@@ -55,20 +69,25 @@ public class Student {
 
     /**
      * 必须加全参构造方法，不然fastjson封装不进对象，已经踩坑
-     * @param reportId
-     * @param score
-     * @param state
-     * @param starNum
-     * @param content
-     * @param username
      */
-    public Student(String reportId, Integer score, int state, double starNum, String content, String username) {
+    public Student(String reportId, Integer score, int state, double starNum, String content, String username, String attendanceId, int applyState) {
         this.reportId = reportId;
         this.score = score;
         this.state = state;
         this.starNum = starNum;
         this.content = content;
         this.username = username;
+        this.attendanceId = attendanceId;
+        this.applyState = applyState;
+    }
+
+    public Student(int applyState, List attendenceIds) {
+        this.applyState = applyState;
+        this.attendenceIds = attendenceIds;
+    }
+
+    public Student() {
+
     }
 
     public String getReportId() {
@@ -119,6 +138,30 @@ public class Student {
         this.username = username;
     }
 
+    public String getAttendanceId() {
+        return attendanceId;
+    }
+
+    public void setAttendanceId(String attendanceId) {
+        this.attendanceId = attendanceId;
+    }
+
+    public int getApplyState() {
+        return applyState;
+    }
+
+    public void setApplyState(int applyState) {
+        this.applyState = applyState;
+    }
+
+    public List getAttendenceIds() {
+        return attendenceIds;
+    }
+
+    public void setAttendenceIds(List attendenceIds) {
+        this.attendenceIds = attendenceIds;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -128,6 +171,9 @@ public class Student {
                 ", starNum=" + starNum +
                 ", content='" + content + '\'' +
                 ", username='" + username + '\'' +
+                ", attendanceId='" + attendanceId + '\'' +
+                ", applyState=" + applyState +
+                ", attendenceIds=" + attendenceIds +
                 '}';
     }
 }

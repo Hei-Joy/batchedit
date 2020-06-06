@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * @author admin
  */
-public class ListStudentResult {
+public class ListStudentResult<T> {
 
     /**
      * 状态
@@ -18,9 +18,9 @@ public class ListStudentResult {
     /**
      * 数据
      */
-    private List<Student> data;
+    private List<T> data;
 
-    public ListStudentResult(String code, String msg, List<Student> data) {
+    public ListStudentResult(String code, String msg, List<T> data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
@@ -42,17 +42,17 @@ public class ListStudentResult {
         this.msg = msg;
     }
 
-    public List<Student> getData() {
+    public List<T> getData() {
         return data;
     }
 
-    public void setData(List<Student> data) {
+    public void setData(List<T> data) {
         this.data = data;
     }
 
     @Override
     public String toString() {
-        return "ListStudent{" +
+        return "ListStudentResult{" +
                 "code='" + code + '\'' +
                 ", msg='" + msg + '\'' +
                 ", data=" + data +
