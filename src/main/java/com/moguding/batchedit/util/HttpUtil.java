@@ -26,7 +26,7 @@ public class HttpUtil {
     private static final String userAgent = "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.87 Safari/537.36";
 
     /**
-     * 发送HttpPost请求，参数为json字符串 * * @param url * @param jsonStr * @return
+     * 发送HttpPost请求，参数为url地址，json字符串， authorization
      */
     public static String sendPost(String url, String jsonStr, String authorization) {
         String result = null;
